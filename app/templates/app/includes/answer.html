@@ -1,0 +1,18 @@
+{% load static %}
+
+<div class="answer" style="padding: 15px; border-radius: 15px">
+    <div class="col-4">
+        <img src="{% static "img/avatar.jpg" %}"  style="max-width: 100px;"></img>
+
+        {% include 'app/includes/rating.html' %}
+    </div>
+    <div class="col-8">
+        {{ answer.text }}
+
+        <div>
+            <input type="checkbox" class="form-check-input">
+            <label >это правильный ответ</label>
+        </div>
+    </div>
+</div>
+<hr>

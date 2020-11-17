@@ -1,0 +1,14 @@
+{% extends 'app/includes/base.html' %}
+{% block tittle %}Вопрос №{{ question.id }}{% endblock %}
+{% block content %}
+{% include 'app/includes/questions.html' %}
+{% for answer in answers %}
+{% include 'app/includes/answer.html' %}
+{% endfor %}
+{% include 'app/includes/paginator.html' %}
+<div>
+    <label >Ваш ответ</label>
+    <textarea class="form-control" rows="3"></textarea>
+    <button class="btn waves-effect waves-light btn-grd-primary">Оветить</button>
+</div>
+{% endblock %}

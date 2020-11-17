@@ -1,0 +1,10 @@
+{% extends 'app/includes/base.html' %}
+
+{% block tittle %}{{ tag.tag_name }}{% endblock %}
+
+{% block content %}
+{% for question in questions %}
+{% include 'app/includes/questions.html' %}
+{% endfor %}
+{% include 'app/includes/paginator.html' %}
+{% endblock %}

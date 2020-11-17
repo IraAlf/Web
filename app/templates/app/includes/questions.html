@@ -1,0 +1,22 @@
+{% load static %}
+
+<!-- Карточка (border-primary - цвет границ карточки) -->
+<div class="card border-primary">
+    <div class="card-header bg-primary text-white ">
+           <img src="{% static "img/avatar.jpg" %}" class="question-img"></img>
+                        <a href="{% url 'question' pk=question.id %}">
+        <h4 style="color: white">{{ question.title }}</h4>
+                </a>
+    </div>
+    <div class="card-body">
+        <p class="card-text" >
+            {{ question.text }}
+        </p>
+        <div>
+                               <a href="{% url 'question' pk=question.id %}">Ответы (4)</a>
+                                   Теги  <a class="card-title" href="{% url 'tag' pk=question.tag1.id %}" }>{{ question.tag1.tag_name}}</a>
+             <a class="card-title" href="{% url 'tag' pk=question.tag2.id %}" }>{{ question.tag2.tag_name}}</a>
+        </div>
+                {% include 'app/includes/rating.html' %}
+    </div>
+</div>

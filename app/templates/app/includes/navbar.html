@@ -1,0 +1,38 @@
+{% load static %}
+
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'index'%}">Ask Alferova</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <form class="form-inline my-0 my-lg-10">
+      <input class="form-control mr-sm-82" type="search" placeholder="search..." aria-label="search...">
+        <button class="btn waves-effect waves-light btn-grd-primary ">Search!</button>
+    </form>
+    <ul class="navbar-nav nav-bar ml-auto">
+      <a class="nav-item active">
+      <a href="{% url 'ask' %}">
+<button class="btn waves-effect waves-light btn-grd-primary">ASK!!</button>
+      </a>
+    </a>
+      </li>
+      <li class="nav-item">
+          <img src="{% static "img/avatar.jpg" %}" class="avatar-sm" width="40" height="40">
+      </li>
+      <li class="nav-item dropdown mr-auto">
+        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          User name
+        </a>
+        <div class="dropdown-menu " aria-labelledby="navbarDropdown mr-auto">
+          <a class="dropdown-item" href="{% url 'settings' %}">Settings</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{% url 'login' %}">Log out</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

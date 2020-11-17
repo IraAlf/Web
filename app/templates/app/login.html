@@ -1,0 +1,15 @@
+{% extends 'app/includes/base.html' %}
+{% block tittle %}Вход{% endblock %}
+
+{% block content %}
+<div class="alert alert-danger" role="alert">
+  <strong>Oh no!</strong> Неправильный пароль!
+</div>
+{% include 'app/includes/form.html' %}
+<a href="{% url 'index' %}">
+<button type="{% url 'index' %}" class="btn waves-effect waves-light btn-grd-primary">Войти</button>
+</a>
+<a href="{% url 'signup' %}">
+<button type="{% url 'signup' %}" class="btn waves-effect waves-light btn-grd-primary">Регистрация</button>
+</a>
+{% endblock %}

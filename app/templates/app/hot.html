@@ -1,0 +1,13 @@
+{% extends 'app/includes/base.html' %}
+
+{% block tittle %}
+<a href="{% url 'index' %}" class="btn btn-link">Новые вопросы</a>
+Популярные вопросы
+{% endblock %}
+
+{% block content %}
+{% for question in questions %}
+{% include 'app/includes/questions.html' %}
+{% endfor %}
+{% include 'app/includes/paginator.html' %}
+{% endblock %}
